@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16/10/2012 10:23:21 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="vo.TbCliente" table="tb_cliente" catalog="crud_cliente">
+        <id name="idCliente" type="java.lang.Integer">
+            <column name="id_cliente" />
+            <generator class="identity" />
+        </id>
+        <property name="nome" type="string">
+            <column name="nome" length="100" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100" />
+        </property>
+        <property name="telefone" type="java.lang.Long">
+            <column name="telefone" />
+        </property>
+        <property name="cpf" type="java.lang.Double">
+            <column name="cpf" precision="22" scale="0" />
+        </property>
+        <property name="sexo" type="string">
+            <column name="sexo" length="2" />
+        </property>
+        <property name="salario" type="big_decimal">
+            <column name="salario" precision="10" />
+        </property>
+        <property name="datanascimento" type="date">
+            <column name="datanascimento" length="10" />
+        </property>
+        <property name="datacadastro" type="timestamp">
+            <column name="datacadastro" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>
